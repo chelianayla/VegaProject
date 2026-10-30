@@ -1,3 +1,4 @@
+
 # VEGA Budget vs Actual Tracker
 
 For the 7 October presentation, run `./Start-Presentation.ps1` and open `http://127.0.0.1:3000`. The app uses PostgreSQL configured in a local `.env` file. Never commit `.env`, passwords, database dumps, or presentation credentials. See [the presentation walkthrough](Docs/Presentation-7-Oct.md) and [the QA report](output/qa/VEGA-QA-Report-2026-10-07.md).

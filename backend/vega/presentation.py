@@ -1,4 +1,4 @@
-"""Serve the presentation UI using the configured PostgreSQL database."""
+﻿"""Serve the presentation UI using the configured PostgreSQL database."""
 from pathlib import Path
 import os
 
@@ -41,3 +41,4 @@ def create_presentation_app():
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(create_presentation_app(), host="127.0.0.1", port=3000)
+

@@ -23,6 +23,7 @@ def run_migrations_offline() -> None:
 
 def run_migrations_online() -> None:
     section = config.get_section(config.config_ini_section) or {}
+    print(database_url())
     section["sqlalchemy.url"] = database_url()
     connectable = engine_from_config(section, prefix="sqlalchemy.", poolclass=pool.NullPool)
     with connectable.connect() as connection:
@@ -32,6 +33,8 @@ def run_migrations_online() -> None:
 
 
 if context.is_offline_mode():
+    print("==== offline")
     run_migrations_offline()
 else:
+    print("==== online")
     run_migrations_online()

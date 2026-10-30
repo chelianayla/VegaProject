@@ -25,6 +25,7 @@ def database_url() -> str:
     host = os.environ["DB_HOST"]
     port = os.getenv("DB_PORT", "5432")
     name = quote_plus(os.environ["DB_NAME"])
+    
     return f"postgresql+psycopg://{username}:{password}@{host}:{port}/{name}"
 
 
